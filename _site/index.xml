@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Data Science Blog</title>
+<link>https://l-git1.github.io/DAT-blog/</link>
+<atom:link href="https://l-git1.github.io/DAT-blog/index.xml" rel="self" type="application/rss+xml"/>
+<description>Blog of Data Science Topics</description>
+<generator>quarto-1.8.26</generator>
+<lastBuildDate>Mon, 01 Dec 2025 06:00:00 GMT</lastBuildDate>
+<item>
+  <title>Post Two</title>
+  <link>https://l-git1.github.io/DAT-blog/posts/post-two/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is Post Two. I will talk about a Data Science idea here.</p>
+
+
+
+ ]]></description>
+  <guid>https://l-git1.github.io/DAT-blog/posts/post-two/</guid>
+  <pubDate>Mon, 01 Dec 2025 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Post One</title>
+  <link>https://l-git1.github.io/DAT-blog/posts/post-one/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is Post One. I will talk about walking someone through connecting to the Google API here. I dont know how this works</p>
+
+
+
+ ]]></description>
+  <guid>https://l-git1.github.io/DAT-blog/posts/post-one/</guid>
+  <pubDate>Mon, 01 Dec 2025 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Post Three</title>
+  <link>https://l-git1.github.io/DAT-blog/posts/post-three/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This is Post Three. I will talk about SCUDEM here.</p>
+
+
+
+ ]]></description>
+  <guid>https://l-git1.github.io/DAT-blog/posts/post-three/</guid>
+  <pubDate>Mon, 01 Dec 2025 06:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

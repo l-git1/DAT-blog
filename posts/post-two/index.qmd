@@ -1,0 +1,6 @@
+---
+title: "Post Two"
+date: 2025-12-01
+---
+
+This is Post Two. I will talk about a Data Science idea here.

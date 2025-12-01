@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/post-one/index.html",
+    "href": "posts/post-one/index.html",
+    "title": "Post One",
+    "section": "",
+    "text": "This is Post One. I will talk about walking someone through connecting to the Google API here. I dont know how this works"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/post-three/index.html",
+    "href": "posts/post-three/index.html",
+    "title": "Post Three",
+    "section": "",
+    "text": "This is Post Three. I will talk about SCUDEM here."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Science Blog",
+    "section": "",
+    "text": "Post Two\n\n\n\n\n\n\n\n\nDec 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPost One\n\n\n\n\n\n\n\n\nDec 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPost Three\n\n\n\n\n\n\n\n\nDec 1, 2025\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/post-two/index.html",
+    "href": "posts/post-two/index.html",
+    "title": "Post Two",
+    "section": "",
+    "text": "This is Post Two. I will talk about a Data Science idea here."
+  }
+]
