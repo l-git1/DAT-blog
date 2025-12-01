@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/post-three/index.html",
+    "href": "posts/post-three/index.html",
+    "title": "Post Three",
+    "section": "",
+    "text": "This is Post Three. I will talk about SCUDEM here."
+  },
+  {
+    "objectID": "posts/post-two/index.html",
+    "href": "posts/post-two/index.html",
+    "title": "Post Two",
+    "section": "",
+    "text": "This is Post Two. I will talk about a Data Science idea here."
+  },
+  {
+    "objectID": "posts/post-one/index.html",
+    "href": "posts/post-one/index.html",
+    "title": "Post One",
+    "section": "",
+    "text": "This is Post One. I will talk about walking someone through connecting to the Google API here. I dont know how this works"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Data Science Blog",
+    "section": "",
+    "text": "Post Two\n\n\n\n\n\n\n\n\nDec 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPost One\n\n\n\n\n\n\n\n\nDec 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nPost Three\n\n\n\n\n\n\n\n\nDec 1, 2025\n\n\n\n\n\nNo matching items"
+  }
+]
