@@ -88,14 +88,14 @@
     "href": "posts/post-two/index.html#what-can-opencv-do",
     "title": "What Is OpenCV? A Simple Overview for Beginners",
     "section": "2. What Can OpenCV Do?",
-    "text": "2. What Can OpenCV Do?\nOpenCV contains thousands of functions, but here are some of the most common things beginners use it for.\n\n1. Reading and writing images\nOpenCV can open a photo from your computer, process it, then save the result.\n\n\n2. Drawing and editing\nYou can add text, shapes, or colors to images through programming.\n\n\n3. Filtering (blurring, sharpening, smoothing)\nWant to blur a background like portrait mode?\nOpenCV can do that with a single function call.\n\n\n4. Edge detection\nOpenCV can find edges, lines, and corners. This is extremely useful for robotics and self-driving cars.\n\n\n5. Working with webcams\nOpenCV can capture live video from your computer’s camera and analyze each frame as it comes in.\n\n\n6. Detecting faces, eyes, hands, or objects\nAlthough OpenCV is not a “deep learning” library itself, it integrates with AI models and includes prebuilt detectors for common objects.\n\n\n7. Object tracking\nYou can track a moving ball, a person walking through a room, or a car driving across a video frame.\nEven though most high-end vision tasks now use deep learning (like TensorFlow or PyTorch), OpenCV is still the backbone for basic image handling and processing."
+    "text": "2. What Can OpenCV Do?\nOpenCV contains thousands of functions, but here are some of the most common things beginners use it for.\n\n- Reading and writing images\nOpenCV can open a photo from your computer, process it, then save the result.\n\n\n- Drawing and editing\nYou can add text, shapes, or colors to images through programming.\n\n\n- Filtering (blurring, sharpening, smoothing)\nWant to blur a background like portrait mode?\nOpenCV can do that with a single function call.\n\n\n- Edge detection\nOpenCV can find edges, lines, and corners. This is extremely useful for robotics and self-driving cars.\n\n\n- Working with webcams\nOpenCV can capture live video from your computer’s camera and analyze each frame as it comes in.\n\n\n- Detecting faces, eyes, hands, or objects\nAlthough OpenCV is not a “deep learning” library itself, it integrates with AI models and includes prebuilt detectors for common objects.\n\n\n- Object tracking\nYou can track a moving ball, a person walking through a room, or a car driving across a video frame.\nEven though most high-end vision tasks now use deep learning (like TensorFlow or PyTorch), OpenCV is still the backbone for basic image handling and processing."
   },
   {
     "objectID": "posts/post-two/index.html#installing-opencv-in-python",
     "href": "posts/post-two/index.html#installing-opencv-in-python",
     "title": "What Is OpenCV? A Simple Overview for Beginners",
     "section": "3. Installing OpenCV in Python",
-    "text": "3. Installing OpenCV in Python\nIf you ever want to try OpenCV in Python, installation is simple:\n```bash pip install opencv-python"
+    "text": "3. Installing OpenCV in Python\nIf you ever want to try OpenCV in Python, installation is simple. Type this in your Terminal:\npip install opencv-python"
   },
   {
     "objectID": "posts/post-two/index.html#a-tiny-example-reading-and-showing-an-image",
@@ -144,14 +144,14 @@
     "href": "posts/post-one/index.html#getting-your-gemini-api-key",
     "title": "Using Google Gemini from Python",
     "section": "3. Getting Your Gemini API Key",
-    "text": "3. Getting Your Gemini API Key\nA Gemini API key is like a “password” that your Python code uses to access Gemini.\nNever post it publicly.\n\nSteps to get your key:\n\nGo to Google AI Studio: https://aistudio.google.com\n\nSign in with your Google account\n\nAccept any terms or permissions if prompted\n\nIn the left sidebar, find API Keys\n\nClick Create API key\n\nCopy the key somewhere safe\n\nYour key will look something like: AlzaSyA3e for example\nWe will NOT paste the real key into our Python code, but we will show where it goes."
+    "text": "3. Getting Your Gemini API Key\nA Gemini API key is like a “password” that your Python code uses to access Gemini.\nNever post it publicly.\n\nSteps to get your key:\n\nGo to Google AI Studio: https://aistudio.google.com\n\nSign in with your Google account\n\nAccept any terms or permissions if prompted\n\nIn the left sidebar, find API Keys\n\nClick Create API key\n\nCopy the key somewhere safe\n\nYour key will look something like: AlzaSyA3e for example"
   },
   {
     "objectID": "posts/post-one/index.html#installing-the-python-package-google-genai",
     "href": "posts/post-one/index.html#installing-the-python-package-google-genai",
     "title": "Using Google Gemini from Python",
     "section": "4. Installing the Python Package (google-genai)",
-    "text": "4. Installing the Python Package (google-genai)\nTo talk to Gemini from Python, Google provides the official google-genai package.\nOpen your terminal and run:\n```bash pip install google-genai\nOr if that doesn’t work, (as in more that one copy of python installed)\n```bash python -m pip install google-genai"
+    "text": "4. Installing the Python Package (google-genai)\nTo talk to Gemini from Python, Google provides the official google-genai package.\nOpen your terminal and run:\npip install google-genai\nOr if that doesn’t work, (as in more that one copy of python installed)\npython -m pip install google-genai"
   },
   {
     "objectID": "posts/post-one/index.html#setting-up-your-api-key-in-your-terminal",
@@ -165,7 +165,7 @@
     "href": "posts/post-one/index.html#a-python-script-tpo-query-gemini",
     "title": "Using Google Gemini from Python",
     "section": "6. A Python Script tpo Query Gemini",
-    "text": "6. A Python Script tpo Query Gemini\nThis code will load your API key, create a Gimini client, send a simple question, and then print Gemini’s answer.\nSave this as gemini_demy.py:\nfrom google import genai import os\ndef main(): # Load the API key from the environment api_key = os.environ.get(“GEMINI_API_KEY”) if not api_key: raise RuntimeError(“GEMINI_API_KEY environment variable is not set.”)\n# Create a Gemini client\nclient = genai.Client(api_key=api_key)\n\n# Ask Gemini a simple question\nresponse = client.models.generate_content(\n    model=\"gemini-2.5-flash\",\n    contents=\"Explain what an API is to a high school student.\"\n)\n\n# Print the response\nprint(\"Gemini says:\\n\")\nprint(response.text)\nif name == “main”: main()\nYou can run this code with:\n```bash python gemini_demo.py\nIf everything is set up correctly, Gemini will print a helpful explanation."
+    "text": "6. A Python Script tpo Query Gemini\nThis code will load your API key, create a Gimini client, send a simple question, and then print Gemini’s answer.\nSave this as gemini_demy.py:\nfrom google import genai import os\ndef main(): # Load the API key from the environment api_key = os.environ.get(“GEMINI_API_KEY”) if not api_key: raise RuntimeError(“GEMINI_API_KEY environment variable is not set.”)\n# Create a Gemini client\nclient = genai.Client(api_key=api_key)\n\n# Ask Gemini a simple question\nresponse = client.models.generate_content(\n    model=\"gemini-2.5-flash\",\n    contents=\"Explain what an API is to a high school student.\"\n)\n\n# Print the response\nprint(\"Gemini says:\\n\")\nprint(response.text)\nif name == “main”: main()\nYou can run this code in your terminal with:\npython gemini_demo.py\nIf everything is set up correctly, Gemini will print a helpful explanation."
   },
   {
     "objectID": "posts/post-one/index.html#more-example-queries",

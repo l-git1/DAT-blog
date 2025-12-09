@@ -212,7 +212,6 @@ Never post it publicly.</p>
 <li>Copy the key somewhere safe</li>
 </ol>
 <p>Your key will look something like: AlzaSyA3e for example</p>
-<p>We will NOT paste the real key into our Python code, but we will show where it goes.</p>
 <hr>
 </section>
 </section>
@@ -220,9 +219,9 @@ Never post it publicly.</p>
 <h2 class="anchored" data-anchor-id="installing-the-python-package-google-genai">4. Installing the Python Package (google-genai)</h2>
 <p>To talk to Gemini from Python, Google provides the official <strong>google-genai</strong> package.</p>
 <p>Open your terminal and run:</p>
-<p>```bash pip install google-genai</p>
+<p>pip install google-genai</p>
 <p>Or if that doesn’t work, (as in more that one copy of python installed)</p>
-<p>```bash python -m pip install google-genai</p>
+<p>python -m pip install google-genai</p>
 <hr>
 </section>
 <section id="setting-up-your-api-key-in-your-terminal" class="level2">
@@ -252,8 +251,8 @@ response = client.models.generate_content(
 print("Gemini says:\n")
 print(response.text)</code></pre>
 <p>if <strong>name</strong> == “<strong>main</strong>”: main()</p>
-<p>You can run this code with:</p>
-<p>```bash python gemini_demo.py</p>
+<p>You can run this code in your terminal with:</p>
+<p>python gemini_demo.py</p>
 <p>If everything is set up correctly, Gemini will print a helpful explanation.</p>
 </section>
 <section id="more-example-queries" class="level2">
