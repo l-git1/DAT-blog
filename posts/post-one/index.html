@@ -7,8 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2025-12-01">
+<meta name="description" content="A simple, student-friendly walkthrough on setting up a Google account, getting a Gemini API key, and calling Gemini from Python.">
 
-<title>Post One – Data Science Blog</title>
+<title>Using Google Gemini from Python – Data Science Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,8 +117,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post One</h1>
-                      </div>
+      <h1 class="title">Using Google Gemini from Python</h1>
+                  <div>
+        <div class="description">
+          A simple, student-friendly walkthrough on setting up a Google account, getting a Gemini API key, and calling Gemini from Python.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">AI</div>
+                <div class="quarto-category">Python</div>
+              </div>
+                  </div>
   </div>
     
   
@@ -146,9 +156,121 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is Post One. I will talk about walking someone through connecting to the Google API here. I’m just happy I got to this point lol</p>
+<section id="what-is-google-gemini" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-google-gemini">1. What Is Google Gemini?</h2>
+<p>Google <strong>Gemini</strong> is an AI assistant created by Google. It can help with writing, explaining topics, summarizing articles, planning assignments, and even helping you understand Python code.</p>
+<p>You can talk to Gemini through a website, a mobile app, or through <strong>Python code</strong> using an API (Application Programming Interface). An API lets your program “talk” to Gemini and receive answers.</p>
+<p>In this guide, we’ll walk through how a high school student with basic Python experience can:</p>
+<ol type="1">
+<li>Set up or sign into a <strong>Google account</strong><br>
+</li>
+<li>Get a <strong>Gemini API key</strong> from Google AI Studio<br>
+</li>
+<li>Install the required <strong>Python package</strong><br>
+</li>
+<li>Write a very small Python script that sends a question to Gemini<br>
+</li>
+<li>Print Gemini’s response in the terminal</li>
+</ol>
+<hr>
+</section>
+<section id="creating-or-signing-into-a-google-account" class="level2">
+<h2 class="anchored" data-anchor-id="creating-or-signing-into-a-google-account">2. Creating or Signing Into a Google Account</h2>
+<p>If you already have Gmail, YouTube, or Google Docs, you already have a Google account.</p>
+<p>If not, follow these steps:</p>
+<ol type="1">
+<li>Go to <a href="https://accounts.google.com" class="uri">https://accounts.google.com</a><br>
+</li>
+<li>Click <strong>Create account</strong><br>
+</li>
+<li>Choose <strong>For my personal use</strong><br>
+</li>
+<li>Fill out the basic information (name, birthday, etc.)<br>
+</li>
+<li>You’ll receive a Google email address like <code>yourname@gmail.com</code></li>
+</ol>
+<p>You will use this account to sign into <strong>Google AI Studio</strong>, where the Gemini API is managed.</p>
+<hr>
+</section>
+<section id="getting-your-gemini-api-key" class="level2">
+<h2 class="anchored" data-anchor-id="getting-your-gemini-api-key">3. Getting Your Gemini API Key</h2>
+<p>A <strong>Gemini API key</strong> is like a “password” that your Python code uses to access Gemini.<br>
+Never post it publicly.</p>
+<section id="steps-to-get-your-key" class="level3">
+<h3 class="anchored" data-anchor-id="steps-to-get-your-key">Steps to get your key:</h3>
+<ol type="1">
+<li>Go to <strong>Google AI Studio</strong>: <a href="https://aistudio.google.com" class="uri">https://aistudio.google.com</a><br>
+</li>
+<li>Sign in with your Google account<br>
+</li>
+<li>Accept any terms or permissions if prompted<br>
+</li>
+<li>In the left sidebar, find <strong>API Keys</strong><br>
+</li>
+<li>Click <strong>Create API key</strong><br>
+</li>
+<li>Copy the key somewhere safe</li>
+</ol>
+<p>Your key will look something like: AlzaSyA3e for example</p>
+<p>We will NOT paste the real key into our Python code, but we will show where it goes.</p>
+<hr>
+</section>
+</section>
+<section id="installing-the-python-package-google-genai" class="level2">
+<h2 class="anchored" data-anchor-id="installing-the-python-package-google-genai">4. Installing the Python Package (google-genai)</h2>
+<p>To talk to Gemini from Python, Google provides the official <strong>google-genai</strong> package.</p>
+<p>Open your terminal and run:</p>
+<p>```bash pip install google-genai</p>
+<p>Or if that doesn’t work, (as in more that one copy of python installed)</p>
+<p>```bash python -m pip install google-genai</p>
+<hr>
+</section>
+<section id="setting-up-your-api-key-in-your-terminal" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-your-api-key-in-your-terminal">5. Setting Up Your API KEy in Your terminal</h2>
+<p>We need to give your Python script access to the API key. The safest way is to store it in an environment variable.</p>
+<p>In your terminal, type:</p>
+<p>export GEMINI_API_KEY = “your API key here”</p>
+<p>This only lasts while the terminal is open. If you close the windown, you’ll need to run it again later.</p>
+<hr>
+</section>
+<section id="a-python-script-tpo-query-gemini" class="level2">
+<h2 class="anchored" data-anchor-id="a-python-script-tpo-query-gemini">6. A Python Script tpo Query Gemini</h2>
+<p>This code will load your API key, create a Gimini client, send a simple question, and then print Gemini’s answer.</p>
+<p>Save this as gemini_demy.py:</p>
+<p>from google import genai import os</p>
+<p>def main(): # Load the API key from the environment api_key = os.environ.get(“GEMINI_API_KEY”) if not api_key: raise RuntimeError(“GEMINI_API_KEY environment variable is not set.”)</p>
+<pre><code># Create a Gemini client
+client = genai.Client(api_key=api_key)
+
+# Ask Gemini a simple question
+response = client.models.generate_content(
+    model="gemini-2.5-flash",
+    contents="Explain what an API is to a high school student."
+)
+
+# Print the response
+print("Gemini says:\n")
+print(response.text)</code></pre>
+<p>if <strong>name</strong> == “<strong>main</strong>”: main()</p>
+<p>You can run this code with:</p>
+<p>```bash python gemini_demo.py</p>
+<p>If everything is set up correctly, Gemini will print a helpful explanation.</p>
+</section>
+<section id="more-example-queries" class="level2">
+<h2 class="anchored" data-anchor-id="more-example-queries">7. More Example Queries</h2>
+<p>Once the basic script works, you can try different questions.</p>
+<p>Here is code that ask Gemini to explain Python lists:</p>
+<p>response = client.models.generate_content( model=“gemini-2.5-flash”, contents=“Explain Python lists with a simple example.” ) print(response.text)</p>
+<p>And here is code that asks Gemini for homework/study help:</p>
+<p>response = client.models.generate_content( model=“gemini-2.5-flash”, contents=“Give me three study tips for learning Python.” ) print(response.text)</p>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">8. Summary</h2>
+<p>In this tutorial, we created or signed into a Google account, retrieved a GeminiAPI key from Google AI Studio, Installed the gogle-ganai package, set up your AIP key in the terminal, wrote some small python programs to query Gemini, and printed the AI’s response.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

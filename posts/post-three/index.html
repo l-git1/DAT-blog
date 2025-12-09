@@ -6,9 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-12-01">
+<meta name="dcterms.date" content="2025-12-08">
+<meta name="description" content="A summary of my SCUDEM project, what SCUDEM is, and an overview of the AI Ouroboros modeling problem I worked on.">
 
-<title>Post Three – Data Science Blog</title>
+<title>My SCUDEM Project: Modeling the AI Ouroboros Problem – Data Science Blog</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -116,8 +117,17 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Post Three</h1>
-                      </div>
+      <h1 class="title">My SCUDEM Project: Modeling the AI Ouroboros Problem</h1>
+                  <div>
+        <div class="description">
+          A summary of my SCUDEM project, what SCUDEM is, and an overview of the AI Ouroboros modeling problem I worked on.
+        </div>
+      </div>
+                          <div class="quarto-categories">
+                <div class="quarto-category">Math Modeling</div>
+                <div class="quarto-category">Differential Equations</div>
+              </div>
+                  </div>
   </div>
     
   
@@ -127,7 +137,7 @@ ul.task-list li input[type="checkbox"] {
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">December 1, 2025</p>
+        <p class="date">December 8, 2025</p>
       </div>
     </div>
     
@@ -146,9 +156,112 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>This is Post Three. I will talk about SCUDEM here. I will got over what it is and how it works.</p>
+<section id="what-is-scudem" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-scudem">1. What Is SCUDEM?</h2>
+<p><strong>SCUDEM</strong> stands for <strong>SIMIODE Challenge Using Differential Equations Modeling</strong>.<br>
+It is an international student competition where small teams choose a real-world problem and build a <strong>differential equations model</strong> to describe, predict, or analyze the behavior of the system.</p>
+<p>Teams spend several days:</p>
+<ul>
+<li>reading and interpreting a modeling prompt<br>
+</li>
+<li>identifying important variables<br>
+</li>
+<li>writing differential equations<br>
+</li>
+<li>analyzing the behavior of the system<br>
+</li>
+<li>and creating a short presentation explaining their model</li>
+</ul>
+<p>The challenge focuses more on <strong>creative thinking, communication, and modeling logic</strong> than on solving advanced equations. It’s a great introduction to applied mathematics.</p>
+<hr>
+</section>
+<section id="the-modeling-prompt-we-chose-the-ai-ouroboros" class="level2">
+<h2 class="anchored" data-anchor-id="the-modeling-prompt-we-chose-the-ai-ouroboros">2. The Modeling Prompt We Chose: “The AI Ouroboros”</h2>
+<p>Our SCUDEM team chose a problem often called the <strong>“AI Ouroboros”</strong>, named after the mythological snake that eats its own tail.</p>
+<p>The idea is this:</p>
+<ul>
+<li>AI models (like large language models) are trained on huge datasets of human-written text.</li>
+<li>As more content online becomes AI-generated, future AI models may accidentally train on <strong>AI-written text instead of human-written text</strong>.</li>
+<li>Over time, this can create a feedback loop where AI is “training on itself,” potentially leading to:
+<ul>
+<li>less diversity in language<br>
+</li>
+<li>amplified errors<br>
+</li>
+<li>drifting quality<br>
+</li>
+<li>collapsed or unstable model behavior</li>
+</ul></li>
+</ul>
+<p>This is a real concern in the AI and data science communities.</p>
+<p>Our goal was to use differential equations to model how the proportion of AI-generated content might grow over time and how that affects long-term model quality.</p>
+<hr>
+</section>
+<section id="variables-and-basic-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="variables-and-basic-assumptions">3. Variables and Basic Assumptions</h2>
+<p>To simplify the problem for SCUDEM, our model focused on two main quantities:</p>
+<ul>
+<li><strong>O(t)</strong> = amount of human-generated text available at time <em>t</em><br>
+</li>
+<li><strong>n(t)</strong> = amount of AI-generated error at time <em>t</em></li>
+</ul>
+<p>We assumed:</p>
+<ol type="1">
+<li>People are still producing human-written text at a steady rate.<br>
+</li>
+<li>AI systems produce error occasionally, and this can be used to learn from.</li>
+<li><h2 id="there-needs-to-be-a-rate-of-media-decay." class="anchored">There needs to be a rate of media decay.</h2></li>
+</ol>
+</section>
+<section id="the-differential-equations-modeling-process" class="level2">
+<h2 class="anchored" data-anchor-id="the-differential-equations-modeling-process">4. The Differential Equations Modeling Process</h2>
+<p>We initially came up with equations like this:</p>
+<p>[ (t) = SaU - Sm ]</p>
+<p>[ (AI) = I(Human) + I(Prompt) + I(New) ]</p>
+<p>Here, we tried to come up with equations by ourselves and reason through it along, but it did not work. We had to work together, plan steps and phases of the project, build a roadmap and and eventually, an equation. That euqation we came up with (after many cups of coffee):</p>
+<p>[ O’(t) = kO(t) + bn’(t) ]</p>
+<ul>
+<li><strong>O’(t)</strong> = Total AI output rate.</li>
+<li><strong>O(t)</strong> = Pool of human produced content.</li>
+<li><strong>k</strong> = Some constant to effect the growth of the total pool.<br>
+</li>
+<li><strong>n’(t)</strong> = AI entropy, or error.</li>
+<li><strong>b</strong> = rate at which we learn and create new content from AI error.</li>
+</ul>
+</section>
+<section id="this-would-be-our-final-equation.-it-combines-features-from-each-of-the-equations-that-we-made-previously-except-we-forged-this-one-as-a-team." class="level2">
+<h2 class="anchored" data-anchor-id="this-would-be-our-final-equation.-it-combines-features-from-each-of-the-equations-that-we-made-previously-except-we-forged-this-one-as-a-team.">This would be our final equation. It combines features from each of the equations that we made previously, except we forged this one as a team.</h2>
+</section>
+<section id="analysis-and-behavior-of-the-system" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-and-behavior-of-the-system">5. Analysis and Behavior of the System</h2>
+<p>Observations:</p>
+<p>Our model suggests that if k remains high and b remains positive, O(t) will continue to grow, representing rapid cultural and informational expansion. However, if AI feedback dominates without human correction (negative b), the model can predict stagnation, where originality it decreased over time.</p>
+<hr>
+</section>
+<section id="what-our-team-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-our-team-learned">6. What Our Team Learned</h2>
+<p>Working on this problem helped our team learn:</p>
+<ul>
+<li>how to build simple differential equations from a real-world situation<br>
+</li>
+<li>how feedback loops can cause systems to collapse or reach equilibrium<br>
+</li>
+<li>how exponential vs linear growth affects long-term model behavior<br>
+</li>
+<li>how even small parameter changes can drastically change outcomes<br>
+</li>
+<li>how to present mathematical ideas clearly with graphs and explanations</li>
+</ul>
+<p>It also introduced us to an important topic in AI ethics and safety:<br>
+<strong>the importance of preserving human-written data and monitoring model training sources.</strong></p>
+<hr>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">7. Conclusion</h2>
+<p>Our SCUDEM project on the <strong>AI Ouroboros</strong> helped us understand how differential equations can model real-world problems—even modern ones involving artificial intelligence. Completing SCUDEM helped me understand how mathematical modeling connects abstract systems to real human questions and how differential equations can describe not only motion or decay, but also the dynamics of knowledge itself.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -10,9 +10,9 @@
 <atom:link href="https://l-git1.github.io/DAT-blog/index.xml" rel="self" type="application/rss+xml"/>
 <description>Blog of Data Science Topics</description>
 <generator>quarto-1.8.26</generator>
-<lastBuildDate>Mon, 01 Dec 2025 06:00:00 GMT</lastBuildDate>
+<lastBuildDate>Mon, 08 Dec 2025 06:00:00 GMT</lastBuildDate>
 <item>
-  <title>Post Two</title>
+  <title>What Is OpenCV? A Simple Overview for Beginners</title>
   <link>https://l-git1.github.io/DAT-blog/posts/post-two/</link>
   <description><![CDATA[ 
 
@@ -20,33 +20,105 @@
 
 
 
-<p>This is Post Two. I will talk about a Data Science idea here. I will chose a topic and go into depth about explaining it.</p>
+<section id="what-is-opencv" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-opencv">1. What Is OpenCV?</h2>
+<p><strong>OpenCV</strong> stands for <strong>Open Source Computer Vision Library</strong>.<br>
+It is one of the most widely used tools for working with images and video using code.</p>
+<p>Computer vision is a field of computer science that focuses on helping computers <em>see</em> and <em>understand</em> the world through cameras, just like humans do with their eyes. OpenCV gives programmers hundreds of tools to:</p>
+<ul>
+<li>load images<br>
+</li>
+<li>detect shapes<br>
+</li>
+<li>recognize faces<br>
+</li>
+<li>track moving objects<br>
+</li>
+<li>filter/blur images<br>
+</li>
+<li>understand edges and lines<br>
+</li>
+<li>work with cameras in real time</li>
+</ul>
+<p>OpenCV works in languages like <strong>Python</strong>, <strong>C++</strong>, and <strong>Java</strong>, but Python is the easiest way to start.</p>
+<hr>
+</section>
+<section id="what-can-opencv-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-can-opencv-do">2. What Can OpenCV Do?</h2>
+<p>OpenCV contains thousands of functions, but here are some of the most common things beginners use it for.</p>
+<section id="reading-and-writing-images" class="level3">
+<h3 class="anchored" data-anchor-id="reading-and-writing-images"><strong>1. Reading and writing images</strong></h3>
+<p>OpenCV can open a photo from your computer, process it, then save the result.</p>
+</section>
+<section id="drawing-and-editing" class="level3">
+<h3 class="anchored" data-anchor-id="drawing-and-editing"><strong>2. Drawing and editing</strong></h3>
+<p>You can add text, shapes, or colors to images through programming.</p>
+</section>
+<section id="filtering-blurring-sharpening-smoothing" class="level3">
+<h3 class="anchored" data-anchor-id="filtering-blurring-sharpening-smoothing"><strong>3. Filtering (blurring, sharpening, smoothing)</strong></h3>
+<p>Want to blur a background like portrait mode?<br>
+OpenCV can do that with a single function call.</p>
+</section>
+<section id="edge-detection" class="level3">
+<h3 class="anchored" data-anchor-id="edge-detection"><strong>4. Edge detection</strong></h3>
+<p>OpenCV can find edges, lines, and corners. This is extremely useful for robotics and self-driving cars.</p>
+</section>
+<section id="working-with-webcams" class="level3">
+<h3 class="anchored" data-anchor-id="working-with-webcams"><strong>5. Working with webcams</strong></h3>
+<p>OpenCV can capture live video from your computer’s camera and analyze each frame as it comes in.</p>
+</section>
+<section id="detecting-faces-eyes-hands-or-objects" class="level3">
+<h3 class="anchored" data-anchor-id="detecting-faces-eyes-hands-or-objects"><strong>6. Detecting faces, eyes, hands, or objects</strong></h3>
+<p>Although OpenCV is not a “deep learning” library itself, it integrates with AI models and includes prebuilt detectors for common objects.</p>
+</section>
+<section id="object-tracking" class="level3">
+<h3 class="anchored" data-anchor-id="object-tracking"><strong>7. Object tracking</strong></h3>
+<p>You can track a moving ball, a person walking through a room, or a car driving across a video frame.</p>
+<p>Even though most high-end vision tasks now use deep learning (like TensorFlow or PyTorch), OpenCV is still the backbone for basic image handling and processing.</p>
+<hr>
+</section>
+</section>
+<section id="installing-opencv-in-python" class="level2">
+<h2 class="anchored" data-anchor-id="installing-opencv-in-python">3. Installing OpenCV in Python</h2>
+<p>If you ever want to try OpenCV in Python, installation is simple:</p>
+<p>```bash pip install opencv-python</p>
+<hr>
+</section>
+<section id="a-tiny-example-reading-and-showing-an-image" class="level2">
+<h2 class="anchored" data-anchor-id="a-tiny-example-reading-and-showing-an-image">4. A Tiny Example: Reading and Showing an image</h2>
+<p>Here is a simple code example to demonstrate how OpenCV works. It loads an image (called my_image.jpg for this example) and displays it in a window.</p>
+<p>import cv2</p>
+<p>img = cv2.imread(“my_image.jpg”)</p>
+<p>cv2.imshow(“My Image”, img)</p>
+<p>cv2.waitKey(0)</p>
+<p>cv2.destroyAllWindows()</p>
+<hr>
+</section>
+<section id="another-example-converting-an-image-to-grayscale" class="level2">
+<h2 class="anchored" data-anchor-id="another-example-converting-an-image-to-grayscale">4. Another Example: Converting an Image to Grayscale</h2>
+<p>A common beginner operation is turning a color image into grayscale:</p>
+<p>import cv2</p>
+<p>img = cv2.imread(“my_image.jpg”) gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)</p>
+<p>cv2.imshow(“Grayscale”, gray) cv2.waitKey(0) cv2.destroyAllWindows()</p>
+<p>This is helpful for things like edge detection, shape recognition, and preprocessing before applying machine learning.</p>
+<hr>
+</section>
+<section id="why-is-opencv-important" class="level2">
+<h2 class="anchored" data-anchor-id="why-is-opencv-important">6. Why Is OpenCV Important?</h2>
+<p>OpenCV is important because it acts as the foundation of countless vision projects. Even if you later use advanced AI models, you will almost always use OpenCV for: - Loading and resizing images - Converting colors - Cropping and Drawing - Preparing input for deep learning models - Capturing frames from webcam streams</p>
+<p>Companies like Tesla, Meta, Google, Adobe, and robotics teams everywhere use OpenCV for various tasks.</p>
 
 
+</section>
 
  ]]></description>
+  <category>Computer Vision</category>
+  <category>Python</category>
   <guid>https://l-git1.github.io/DAT-blog/posts/post-two/</guid>
-  <pubDate>Mon, 01 Dec 2025 06:00:00 GMT</pubDate>
+  <pubDate>Mon, 08 Dec 2025 06:00:00 GMT</pubDate>
 </item>
 <item>
-  <title>Post One</title>
-  <link>https://l-git1.github.io/DAT-blog/posts/post-one/</link>
-  <description><![CDATA[ 
-
-
-
-
-
-<p>This is Post One. I will talk about walking someone through connecting to the Google API here. I’m just happy I got to this point lol</p>
-
-
-
- ]]></description>
-  <guid>https://l-git1.github.io/DAT-blog/posts/post-one/</guid>
-  <pubDate>Mon, 01 Dec 2025 06:00:00 GMT</pubDate>
-</item>
-<item>
-  <title>Post Three</title>
+  <title>My SCUDEM Project: Modeling the AI Ouroboros Problem</title>
   <link>https://l-git1.github.io/DAT-blog/posts/post-three/</link>
   <description><![CDATA[ 
 
@@ -54,12 +126,248 @@
 
 
 
-<p>This is Post Three. I will talk about SCUDEM here. I will got over what it is and how it works.</p>
+<section id="what-is-scudem" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-scudem">1. What Is SCUDEM?</h2>
+<p><strong>SCUDEM</strong> stands for <strong>SIMIODE Challenge Using Differential Equations Modeling</strong>.<br>
+It is an international student competition where small teams choose a real-world problem and build a <strong>differential equations model</strong> to describe, predict, or analyze the behavior of the system.</p>
+<p>Teams spend several days:</p>
+<ul>
+<li>reading and interpreting a modeling prompt<br>
+</li>
+<li>identifying important variables<br>
+</li>
+<li>writing differential equations<br>
+</li>
+<li>analyzing the behavior of the system<br>
+</li>
+<li>and creating a short presentation explaining their model</li>
+</ul>
+<p>The challenge focuses more on <strong>creative thinking, communication, and modeling logic</strong> than on solving advanced equations. It’s a great introduction to applied mathematics.</p>
+<hr>
+</section>
+<section id="the-modeling-prompt-we-chose-the-ai-ouroboros" class="level2">
+<h2 class="anchored" data-anchor-id="the-modeling-prompt-we-chose-the-ai-ouroboros">2. The Modeling Prompt We Chose: “The AI Ouroboros”</h2>
+<p>Our SCUDEM team chose a problem often called the <strong>“AI Ouroboros”</strong>, named after the mythological snake that eats its own tail.</p>
+<p>The idea is this:</p>
+<ul>
+<li>AI models (like large language models) are trained on huge datasets of human-written text.</li>
+<li>As more content online becomes AI-generated, future AI models may accidentally train on <strong>AI-written text instead of human-written text</strong>.</li>
+<li>Over time, this can create a feedback loop where AI is “training on itself,” potentially leading to:
+<ul>
+<li>less diversity in language<br>
+</li>
+<li>amplified errors<br>
+</li>
+<li>drifting quality<br>
+</li>
+<li>collapsed or unstable model behavior</li>
+</ul></li>
+</ul>
+<p>This is a real concern in the AI and data science communities.</p>
+<p>Our goal was to use differential equations to model how the proportion of AI-generated content might grow over time and how that affects long-term model quality.</p>
+<hr>
+</section>
+<section id="variables-and-basic-assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="variables-and-basic-assumptions">3. Variables and Basic Assumptions</h2>
+<p>To simplify the problem for SCUDEM, our model focused on two main quantities:</p>
+<ul>
+<li><strong>O(t)</strong> = amount of human-generated text available at time <em>t</em><br>
+</li>
+<li><strong>n(t)</strong> = amount of AI-generated error at time <em>t</em></li>
+</ul>
+<p>We assumed:</p>
+<ol type="1">
+<li>People are still producing human-written text at a steady rate.<br>
+</li>
+<li>AI systems produce error occasionally, and this can be used to learn from.</li>
+<li><h2 id="there-needs-to-be-a-rate-of-media-decay." class="anchored">There needs to be a rate of media decay.</h2></li>
+</ol>
+</section>
+<section id="the-differential-equations-modeling-process" class="level2">
+<h2 class="anchored" data-anchor-id="the-differential-equations-modeling-process">4. The Differential Equations Modeling Process</h2>
+<p>We initially came up with equations like this:</p>
+<p>[ (t) = SaU - Sm ]</p>
+<p>[ (AI) = I(Human) + I(Prompt) + I(New) ]</p>
+<p>Here, we tried to come up with equations by ourselves and reason through it along, but it did not work. We had to work together, plan steps and phases of the project, build a roadmap and and eventually, an equation. That euqation we came up with (after many cups of coffee):</p>
+<p>[ O’(t) = kO(t) + bn’(t) ]</p>
+<ul>
+<li><strong>O’(t)</strong> = Total AI output rate.</li>
+<li><strong>O(t)</strong> = Pool of human produced content.</li>
+<li><strong>k</strong> = Some constant to effect the growth of the total pool.<br>
+</li>
+<li><strong>n’(t)</strong> = AI entropy, or error.</li>
+<li><strong>b</strong> = rate at which we learn and create new content from AI error.</li>
+</ul>
+</section>
+<section id="this-would-be-our-final-equation.-it-combines-features-from-each-of-the-equations-that-we-made-previously-except-we-forged-this-one-as-a-team." class="level2">
+<h2 class="anchored" data-anchor-id="this-would-be-our-final-equation.-it-combines-features-from-each-of-the-equations-that-we-made-previously-except-we-forged-this-one-as-a-team.">This would be our final equation. It combines features from each of the equations that we made previously, except we forged this one as a team.</h2>
+</section>
+<section id="analysis-and-behavior-of-the-system" class="level2">
+<h2 class="anchored" data-anchor-id="analysis-and-behavior-of-the-system">5. Analysis and Behavior of the System</h2>
+<p>Observations:</p>
+<p>Our model suggests that if k remains high and b remains positive, O(t) will continue to grow, representing rapid cultural and informational expansion. However, if AI feedback dominates without human correction (negative b), the model can predict stagnation, where originality it decreased over time.</p>
+<hr>
+</section>
+<section id="what-our-team-learned" class="level2">
+<h2 class="anchored" data-anchor-id="what-our-team-learned">6. What Our Team Learned</h2>
+<p>Working on this problem helped our team learn:</p>
+<ul>
+<li>how to build simple differential equations from a real-world situation<br>
+</li>
+<li>how feedback loops can cause systems to collapse or reach equilibrium<br>
+</li>
+<li>how exponential vs linear growth affects long-term model behavior<br>
+</li>
+<li>how even small parameter changes can drastically change outcomes<br>
+</li>
+<li>how to present mathematical ideas clearly with graphs and explanations</li>
+</ul>
+<p>It also introduced us to an important topic in AI ethics and safety:<br>
+<strong>the importance of preserving human-written data and monitoring model training sources.</strong></p>
+<hr>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">7. Conclusion</h2>
+<p>Our SCUDEM project on the <strong>AI Ouroboros</strong> helped us understand how differential equations can model real-world problems—even modern ones involving artificial intelligence. Completing SCUDEM helped me understand how mathematical modeling connects abstract systems to real human questions and how differential equations can describe not only motion or decay, but also the dynamics of knowledge itself.</p>
 
 
+</section>
 
  ]]></description>
+  <category>Math Modeling</category>
+  <category>Differential Equations</category>
   <guid>https://l-git1.github.io/DAT-blog/posts/post-three/</guid>
+  <pubDate>Mon, 08 Dec 2025 06:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Using Google Gemini from Python</title>
+  <link>https://l-git1.github.io/DAT-blog/posts/post-one/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<section id="what-is-google-gemini" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-google-gemini">1. What Is Google Gemini?</h2>
+<p>Google <strong>Gemini</strong> is an AI assistant created by Google. It can help with writing, explaining topics, summarizing articles, planning assignments, and even helping you understand Python code.</p>
+<p>You can talk to Gemini through a website, a mobile app, or through <strong>Python code</strong> using an API (Application Programming Interface). An API lets your program “talk” to Gemini and receive answers.</p>
+<p>In this guide, we’ll walk through how a high school student with basic Python experience can:</p>
+<ol type="1">
+<li>Set up or sign into a <strong>Google account</strong><br>
+</li>
+<li>Get a <strong>Gemini API key</strong> from Google AI Studio<br>
+</li>
+<li>Install the required <strong>Python package</strong><br>
+</li>
+<li>Write a very small Python script that sends a question to Gemini<br>
+</li>
+<li>Print Gemini’s response in the terminal</li>
+</ol>
+<hr>
+</section>
+<section id="creating-or-signing-into-a-google-account" class="level2">
+<h2 class="anchored" data-anchor-id="creating-or-signing-into-a-google-account">2. Creating or Signing Into a Google Account</h2>
+<p>If you already have Gmail, YouTube, or Google Docs, you already have a Google account.</p>
+<p>If not, follow these steps:</p>
+<ol type="1">
+<li>Go to <a href="https://accounts.google.com" class="uri">https://accounts.google.com</a><br>
+</li>
+<li>Click <strong>Create account</strong><br>
+</li>
+<li>Choose <strong>For my personal use</strong><br>
+</li>
+<li>Fill out the basic information (name, birthday, etc.)<br>
+</li>
+<li>You’ll receive a Google email address like <code>yourname@gmail.com</code></li>
+</ol>
+<p>You will use this account to sign into <strong>Google AI Studio</strong>, where the Gemini API is managed.</p>
+<hr>
+</section>
+<section id="getting-your-gemini-api-key" class="level2">
+<h2 class="anchored" data-anchor-id="getting-your-gemini-api-key">3. Getting Your Gemini API Key</h2>
+<p>A <strong>Gemini API key</strong> is like a “password” that your Python code uses to access Gemini.<br>
+Never post it publicly.</p>
+<section id="steps-to-get-your-key" class="level3">
+<h3 class="anchored" data-anchor-id="steps-to-get-your-key">Steps to get your key:</h3>
+<ol type="1">
+<li>Go to <strong>Google AI Studio</strong>: <a href="https://aistudio.google.com" class="uri">https://aistudio.google.com</a><br>
+</li>
+<li>Sign in with your Google account<br>
+</li>
+<li>Accept any terms or permissions if prompted<br>
+</li>
+<li>In the left sidebar, find <strong>API Keys</strong><br>
+</li>
+<li>Click <strong>Create API key</strong><br>
+</li>
+<li>Copy the key somewhere safe</li>
+</ol>
+<p>Your key will look something like: AlzaSyA3e for example</p>
+<p>We will NOT paste the real key into our Python code, but we will show where it goes.</p>
+<hr>
+</section>
+</section>
+<section id="installing-the-python-package-google-genai" class="level2">
+<h2 class="anchored" data-anchor-id="installing-the-python-package-google-genai">4. Installing the Python Package (google-genai)</h2>
+<p>To talk to Gemini from Python, Google provides the official <strong>google-genai</strong> package.</p>
+<p>Open your terminal and run:</p>
+<p>```bash pip install google-genai</p>
+<p>Or if that doesn’t work, (as in more that one copy of python installed)</p>
+<p>```bash python -m pip install google-genai</p>
+<hr>
+</section>
+<section id="setting-up-your-api-key-in-your-terminal" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-your-api-key-in-your-terminal">5. Setting Up Your API KEy in Your terminal</h2>
+<p>We need to give your Python script access to the API key. The safest way is to store it in an environment variable.</p>
+<p>In your terminal, type:</p>
+<p>export GEMINI_API_KEY = “your API key here”</p>
+<p>This only lasts while the terminal is open. If you close the windown, you’ll need to run it again later.</p>
+<hr>
+</section>
+<section id="a-python-script-tpo-query-gemini" class="level2">
+<h2 class="anchored" data-anchor-id="a-python-script-tpo-query-gemini">6. A Python Script tpo Query Gemini</h2>
+<p>This code will load your API key, create a Gimini client, send a simple question, and then print Gemini’s answer.</p>
+<p>Save this as gemini_demy.py:</p>
+<p>from google import genai import os</p>
+<p>def main(): # Load the API key from the environment api_key = os.environ.get(“GEMINI_API_KEY”) if not api_key: raise RuntimeError(“GEMINI_API_KEY environment variable is not set.”)</p>
+<pre><code># Create a Gemini client
+client = genai.Client(api_key=api_key)
+
+# Ask Gemini a simple question
+response = client.models.generate_content(
+    model="gemini-2.5-flash",
+    contents="Explain what an API is to a high school student."
+)
+
+# Print the response
+print("Gemini says:\n")
+print(response.text)</code></pre>
+<p>if <strong>name</strong> == “<strong>main</strong>”: main()</p>
+<p>You can run this code with:</p>
+<p>```bash python gemini_demo.py</p>
+<p>If everything is set up correctly, Gemini will print a helpful explanation.</p>
+</section>
+<section id="more-example-queries" class="level2">
+<h2 class="anchored" data-anchor-id="more-example-queries">7. More Example Queries</h2>
+<p>Once the basic script works, you can try different questions.</p>
+<p>Here is code that ask Gemini to explain Python lists:</p>
+<p>response = client.models.generate_content( model=“gemini-2.5-flash”, contents=“Explain Python lists with a simple example.” ) print(response.text)</p>
+<p>And here is code that asks Gemini for homework/study help:</p>
+<p>response = client.models.generate_content( model=“gemini-2.5-flash”, contents=“Give me three study tips for learning Python.” ) print(response.text)</p>
+<hr>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">8. Summary</h2>
+<p>In this tutorial, we created or signed into a Google account, retrieved a GeminiAPI key from Google AI Studio, Installed the gogle-ganai package, set up your AIP key in the terminal, wrote some small python programs to query Gemini, and printed the AI’s response.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>AI</category>
+  <category>Python</category>
+  <guid>https://l-git1.github.io/DAT-blog/posts/post-one/</guid>
   <pubDate>Mon, 01 Dec 2025 06:00:00 GMT</pubDate>
 </item>
 </channel>
