@@ -26,19 +26,19 @@
 It is one of the most widely used tools for working with images and video using code.</p>
 <p>Computer vision is a field of computer science that focuses on helping computers <em>see</em> and <em>understand</em> the world through cameras, just like humans do with their eyes. OpenCV gives programmers hundreds of tools to:</p>
 <ul>
-<li>load images<br>
+<li>Load images<br>
 </li>
-<li>detect shapes<br>
+<li>Detect shapes<br>
 </li>
-<li>recognize faces<br>
+<li>Recognize faces<br>
 </li>
-<li>track moving objects<br>
+<li>Track moving objects<br>
 </li>
-<li>filter/blur images<br>
+<li>Filter/blur images<br>
 </li>
-<li>understand edges and lines<br>
+<li>Understand edges and lines<br>
 </li>
-<li>work with cameras in real time</li>
+<li>Work with cameras in real time</li>
 </ul>
 <p>OpenCV works in languages like <strong>Python</strong>, <strong>C++</strong>, and <strong>Java</strong>, but Python is the easiest way to start.</p>
 <hr>
@@ -105,7 +105,14 @@ OpenCV can do that with a single function call.</p>
 </section>
 <section id="why-is-opencv-important" class="level2">
 <h2 class="anchored" data-anchor-id="why-is-opencv-important">6. Why Is OpenCV Important?</h2>
-<p>OpenCV is important because it acts as the foundation of countless vision projects. Even if you later use advanced AI models, you will almost always use OpenCV for: - Loading and resizing images - Converting colors - Cropping and Drawing - Preparing input for deep learning models - Capturing frames from webcam streams</p>
+<p>OpenCV is important because it acts as the foundation of countless vision projects. Even if you later use advanced AI models, you will almost always use OpenCV for:</p>
+<ul>
+<li>Loading and resizing images</li>
+<li>Converting colors</li>
+<li>Cropping and Drawing</li>
+<li>Preparing input for deep learning models</li>
+<li>Capturing frames from webcam streams</li>
+</ul>
 <p>Companies like Tesla, Meta, Google, Adobe, and robotics teams everywhere use OpenCV for various tasks.</p>
 
 
@@ -150,8 +157,8 @@ It is an international student competition where small teams choose a real-world
 <p>Our SCUDEM team chose a problem often called the <strong>“AI Ouroboros”</strong>, named after the mythological snake that eats its own tail.</p>
 <p>The idea is this:</p>
 <ul>
-<li>AI models (like large language models) are trained on huge datasets of human-written text.</li>
-<li>As more content online becomes AI-generated, future AI models may accidentally train on <strong>AI-written text instead of human-written text</strong>.</li>
+<li>AI models (like large language models) are trained on huge datasets of human-written content.</li>
+<li>As more content online becomes AI-generated, future AI models may accidentally train on <strong>AI-written content instead of human-written content</strong>.</li>
 <li>Over time, this can create a feedback loop where AI is “training on itself,” potentially leading to:
 <ul>
 <li>less diversity in language<br>
@@ -177,11 +184,12 @@ It is an international student competition where small teams choose a real-world
 </ul>
 <p>We assumed:</p>
 <ol type="1">
-<li>People are still producing human-written text at a steady rate.<br>
+<li>People are still producing human-written content at a steady rate.<br>
 </li>
 <li>AI systems produce error occasionally, and this can be used to learn from.</li>
-<li><h2 id="there-needs-to-be-a-rate-of-media-decay." class="anchored">There needs to be a rate of media decay.</h2></li>
+<li>There needs to be a rate of media decay.</li>
 </ol>
+<hr>
 </section>
 <section id="the-differential-equations-modeling-process" class="level2">
 <h2 class="anchored" data-anchor-id="the-differential-equations-modeling-process">4. The Differential Equations Modeling Process</h2>
@@ -252,7 +260,7 @@ It is an international student competition where small teams choose a real-world
 <h2 class="anchored" data-anchor-id="what-is-google-gemini">1. What Is Google Gemini?</h2>
 <p>Google <strong>Gemini</strong> is an AI assistant created by Google. It can help with writing, explaining topics, summarizing articles, planning assignments, and even helping you understand Python code.</p>
 <p>You can talk to Gemini through a website, a mobile app, or through <strong>Python code</strong> using an API (Application Programming Interface). An API lets your program “talk” to Gemini and receive answers.</p>
-<p>In this guide, we’ll walk through how a high school student with basic Python experience can:</p>
+<p>In this guide, I’ll walk through how you can:</p>
 <ol type="1">
 <li>Set up or sign into a <strong>Google account</strong><br>
 </li>
@@ -324,22 +332,19 @@ Never post it publicly.</p>
 <p>This only lasts while the terminal is open. If you close the windown, you’ll need to run it again later.</p>
 <hr>
 </section>
-<section id="a-python-script-tpo-query-gemini" class="level2">
-<h2 class="anchored" data-anchor-id="a-python-script-tpo-query-gemini">6. A Python Script tpo Query Gemini</h2>
+<section id="a-python-script-to-query-gemini" class="level2">
+<h2 class="anchored" data-anchor-id="a-python-script-to-query-gemini">6. A Python Script to Query Gemini</h2>
 <p>This code will load your API key, create a Gimini client, send a simple question, and then print Gemini’s answer.</p>
 <p>Save this as gemini_demy.py:</p>
 <p>from google import genai import os</p>
-<p>def main(): # Load the API key from the environment api_key = os.environ.get(“GEMINI_API_KEY”) if not api_key: raise RuntimeError(“GEMINI_API_KEY environment variable is not set.”)</p>
-<pre><code># Create a Gemini client
-client = genai.Client(api_key=api_key)
+<p>def main(): api_key = os.environ.get(“GEMINI_API_KEY”) if not api_key: raise RuntimeError(“GEMINI_API_KEY environment variable is not set.”)</p>
+<pre><code>client = genai.Client(api_key=api_key)
 
-# Ask Gemini a simple question
 response = client.models.generate_content(
     model="gemini-2.5-flash",
     contents="Explain what an API is to a high school student."
 )
 
-# Print the response
 print("Gemini says:\n")
 print(response.text)</code></pre>
 <p>if <strong>name</strong> == “<strong>main</strong>”: main()</p>
@@ -358,7 +363,7 @@ print(response.text)</code></pre>
 </section>
 <section id="summary" class="level2">
 <h2 class="anchored" data-anchor-id="summary">8. Summary</h2>
-<p>In this tutorial, we created or signed into a Google account, retrieved a GeminiAPI key from Google AI Studio, Installed the gogle-ganai package, set up your AIP key in the terminal, wrote some small python programs to query Gemini, and printed the AI’s response.</p>
+<p>In this tutorial, we created or signed into a Google account, retrieved a GeminiAPI key from Google AI Studio, Installed the Google-Genai package, set up your AIP key in the terminal, wrote some small python programs to query Gemini, and printed the AI’s response.</p>
 
 
 </section>

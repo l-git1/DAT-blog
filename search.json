@@ -25,14 +25,14 @@
     "href": "posts/post-three/index.html#the-modeling-prompt-we-chose-the-ai-ouroboros",
     "title": "My SCUDEM Project: Modeling the AI Ouroboros Problem",
     "section": "2. The Modeling Prompt We Chose: “The AI Ouroboros”",
-    "text": "2. The Modeling Prompt We Chose: “The AI Ouroboros”\nOur SCUDEM team chose a problem often called the “AI Ouroboros”, named after the mythological snake that eats its own tail.\nThe idea is this:\n\nAI models (like large language models) are trained on huge datasets of human-written text.\nAs more content online becomes AI-generated, future AI models may accidentally train on AI-written text instead of human-written text.\nOver time, this can create a feedback loop where AI is “training on itself,” potentially leading to:\n\nless diversity in language\n\namplified errors\n\ndrifting quality\n\ncollapsed or unstable model behavior\n\n\nThis is a real concern in the AI and data science communities.\nOur goal was to use differential equations to model how the proportion of AI-generated content might grow over time and how that affects long-term model quality."
+    "text": "2. The Modeling Prompt We Chose: “The AI Ouroboros”\nOur SCUDEM team chose a problem often called the “AI Ouroboros”, named after the mythological snake that eats its own tail.\nThe idea is this:\n\nAI models (like large language models) are trained on huge datasets of human-written content.\nAs more content online becomes AI-generated, future AI models may accidentally train on AI-written content instead of human-written content.\nOver time, this can create a feedback loop where AI is “training on itself,” potentially leading to:\n\nless diversity in language\n\namplified errors\n\ndrifting quality\n\ncollapsed or unstable model behavior\n\n\nThis is a real concern in the AI and data science communities.\nOur goal was to use differential equations to model how the proportion of AI-generated content might grow over time and how that affects long-term model quality."
   },
   {
     "objectID": "posts/post-three/index.html#variables-and-basic-assumptions",
     "href": "posts/post-three/index.html#variables-and-basic-assumptions",
     "title": "My SCUDEM Project: Modeling the AI Ouroboros Problem",
     "section": "3. Variables and Basic Assumptions",
-    "text": "3. Variables and Basic Assumptions\nTo simplify the problem for SCUDEM, our model focused on two main quantities:\n\nO(t) = amount of human-generated text available at time t\n\nn(t) = amount of AI-generated error at time t\n\nWe assumed:\n\nPeople are still producing human-written text at a steady rate.\n\nAI systems produce error occasionally, and this can be used to learn from.\nThere needs to be a rate of media decay."
+    "text": "3. Variables and Basic Assumptions\nTo simplify the problem for SCUDEM, our model focused on two main quantities:\n\nO(t) = amount of human-generated text available at time t\n\nn(t) = amount of AI-generated error at time t\n\nWe assumed:\n\nPeople are still producing human-written content at a steady rate.\n\nAI systems produce error occasionally, and this can be used to learn from.\nThere needs to be a rate of media decay."
   },
   {
     "objectID": "posts/post-three/index.html#the-differential-equations-modeling-process",
@@ -74,14 +74,14 @@
     "href": "posts/post-two/index.html",
     "title": "What Is OpenCV? A Simple Overview for Beginners",
     "section": "",
-    "text": "OpenCV stands for Open Source Computer Vision Library.\nIt is one of the most widely used tools for working with images and video using code.\nComputer vision is a field of computer science that focuses on helping computers see and understand the world through cameras, just like humans do with their eyes. OpenCV gives programmers hundreds of tools to:\n\nload images\n\ndetect shapes\n\nrecognize faces\n\ntrack moving objects\n\nfilter/blur images\n\nunderstand edges and lines\n\nwork with cameras in real time\n\nOpenCV works in languages like Python, C++, and Java, but Python is the easiest way to start."
+    "text": "OpenCV stands for Open Source Computer Vision Library.\nIt is one of the most widely used tools for working with images and video using code.\nComputer vision is a field of computer science that focuses on helping computers see and understand the world through cameras, just like humans do with their eyes. OpenCV gives programmers hundreds of tools to:\n\nLoad images\n\nDetect shapes\n\nRecognize faces\n\nTrack moving objects\n\nFilter/blur images\n\nUnderstand edges and lines\n\nWork with cameras in real time\n\nOpenCV works in languages like Python, C++, and Java, but Python is the easiest way to start."
   },
   {
     "objectID": "posts/post-two/index.html#what-is-opencv",
     "href": "posts/post-two/index.html#what-is-opencv",
     "title": "What Is OpenCV? A Simple Overview for Beginners",
     "section": "",
-    "text": "OpenCV stands for Open Source Computer Vision Library.\nIt is one of the most widely used tools for working with images and video using code.\nComputer vision is a field of computer science that focuses on helping computers see and understand the world through cameras, just like humans do with their eyes. OpenCV gives programmers hundreds of tools to:\n\nload images\n\ndetect shapes\n\nrecognize faces\n\ntrack moving objects\n\nfilter/blur images\n\nunderstand edges and lines\n\nwork with cameras in real time\n\nOpenCV works in languages like Python, C++, and Java, but Python is the easiest way to start."
+    "text": "OpenCV stands for Open Source Computer Vision Library.\nIt is one of the most widely used tools for working with images and video using code.\nComputer vision is a field of computer science that focuses on helping computers see and understand the world through cameras, just like humans do with their eyes. OpenCV gives programmers hundreds of tools to:\n\nLoad images\n\nDetect shapes\n\nRecognize faces\n\nTrack moving objects\n\nFilter/blur images\n\nUnderstand edges and lines\n\nWork with cameras in real time\n\nOpenCV works in languages like Python, C++, and Java, but Python is the easiest way to start."
   },
   {
     "objectID": "posts/post-two/index.html#what-can-opencv-do",
@@ -116,21 +116,21 @@
     "href": "posts/post-two/index.html#why-is-opencv-important",
     "title": "What Is OpenCV? A Simple Overview for Beginners",
     "section": "6. Why Is OpenCV Important?",
-    "text": "6. Why Is OpenCV Important?\nOpenCV is important because it acts as the foundation of countless vision projects. Even if you later use advanced AI models, you will almost always use OpenCV for: - Loading and resizing images - Converting colors - Cropping and Drawing - Preparing input for deep learning models - Capturing frames from webcam streams\nCompanies like Tesla, Meta, Google, Adobe, and robotics teams everywhere use OpenCV for various tasks."
+    "text": "6. Why Is OpenCV Important?\nOpenCV is important because it acts as the foundation of countless vision projects. Even if you later use advanced AI models, you will almost always use OpenCV for:\n\nLoading and resizing images\nConverting colors\nCropping and Drawing\nPreparing input for deep learning models\nCapturing frames from webcam streams\n\nCompanies like Tesla, Meta, Google, Adobe, and robotics teams everywhere use OpenCV for various tasks."
   },
   {
     "objectID": "posts/post-one/index.html",
     "href": "posts/post-one/index.html",
     "title": "Using Google Gemini from Python",
     "section": "",
-    "text": "Google Gemini is an AI assistant created by Google. It can help with writing, explaining topics, summarizing articles, planning assignments, and even helping you understand Python code.\nYou can talk to Gemini through a website, a mobile app, or through Python code using an API (Application Programming Interface). An API lets your program “talk” to Gemini and receive answers.\nIn this guide, we’ll walk through how a high school student with basic Python experience can:\n\nSet up or sign into a Google account\n\nGet a Gemini API key from Google AI Studio\n\nInstall the required Python package\n\nWrite a very small Python script that sends a question to Gemini\n\nPrint Gemini’s response in the terminal"
+    "text": "Google Gemini is an AI assistant created by Google. It can help with writing, explaining topics, summarizing articles, planning assignments, and even helping you understand Python code.\nYou can talk to Gemini through a website, a mobile app, or through Python code using an API (Application Programming Interface). An API lets your program “talk” to Gemini and receive answers.\nIn this guide, I’ll walk through how you can:\n\nSet up or sign into a Google account\n\nGet a Gemini API key from Google AI Studio\n\nInstall the required Python package\n\nWrite a very small Python script that sends a question to Gemini\n\nPrint Gemini’s response in the terminal"
   },
   {
     "objectID": "posts/post-one/index.html#what-is-google-gemini",
     "href": "posts/post-one/index.html#what-is-google-gemini",
     "title": "Using Google Gemini from Python",
     "section": "",
-    "text": "Google Gemini is an AI assistant created by Google. It can help with writing, explaining topics, summarizing articles, planning assignments, and even helping you understand Python code.\nYou can talk to Gemini through a website, a mobile app, or through Python code using an API (Application Programming Interface). An API lets your program “talk” to Gemini and receive answers.\nIn this guide, we’ll walk through how a high school student with basic Python experience can:\n\nSet up or sign into a Google account\n\nGet a Gemini API key from Google AI Studio\n\nInstall the required Python package\n\nWrite a very small Python script that sends a question to Gemini\n\nPrint Gemini’s response in the terminal"
+    "text": "Google Gemini is an AI assistant created by Google. It can help with writing, explaining topics, summarizing articles, planning assignments, and even helping you understand Python code.\nYou can talk to Gemini through a website, a mobile app, or through Python code using an API (Application Programming Interface). An API lets your program “talk” to Gemini and receive answers.\nIn this guide, I’ll walk through how you can:\n\nSet up or sign into a Google account\n\nGet a Gemini API key from Google AI Studio\n\nInstall the required Python package\n\nWrite a very small Python script that sends a question to Gemini\n\nPrint Gemini’s response in the terminal"
   },
   {
     "objectID": "posts/post-one/index.html#creating-or-signing-into-a-google-account",
@@ -161,11 +161,11 @@
     "text": "5. Setting Up Your API KEy in Your terminal\nWe need to give your Python script access to the API key. The safest way is to store it in an environment variable.\nIn your terminal, type:\nexport GEMINI_API_KEY = “your API key here”\nThis only lasts while the terminal is open. If you close the windown, you’ll need to run it again later."
   },
   {
-    "objectID": "posts/post-one/index.html#a-python-script-tpo-query-gemini",
-    "href": "posts/post-one/index.html#a-python-script-tpo-query-gemini",
+    "objectID": "posts/post-one/index.html#a-python-script-to-query-gemini",
+    "href": "posts/post-one/index.html#a-python-script-to-query-gemini",
     "title": "Using Google Gemini from Python",
-    "section": "6. A Python Script tpo Query Gemini",
-    "text": "6. A Python Script tpo Query Gemini\nThis code will load your API key, create a Gimini client, send a simple question, and then print Gemini’s answer.\nSave this as gemini_demy.py:\nfrom google import genai import os\ndef main(): # Load the API key from the environment api_key = os.environ.get(“GEMINI_API_KEY”) if not api_key: raise RuntimeError(“GEMINI_API_KEY environment variable is not set.”)\n# Create a Gemini client\nclient = genai.Client(api_key=api_key)\n\n# Ask Gemini a simple question\nresponse = client.models.generate_content(\n    model=\"gemini-2.5-flash\",\n    contents=\"Explain what an API is to a high school student.\"\n)\n\n# Print the response\nprint(\"Gemini says:\\n\")\nprint(response.text)\nif name == “main”: main()\nYou can run this code in your terminal with:\npython gemini_demo.py\nIf everything is set up correctly, Gemini will print a helpful explanation."
+    "section": "6. A Python Script to Query Gemini",
+    "text": "6. A Python Script to Query Gemini\nThis code will load your API key, create a Gimini client, send a simple question, and then print Gemini’s answer.\nSave this as gemini_demy.py:\nfrom google import genai import os\ndef main(): api_key = os.environ.get(“GEMINI_API_KEY”) if not api_key: raise RuntimeError(“GEMINI_API_KEY environment variable is not set.”)\nclient = genai.Client(api_key=api_key)\n\nresponse = client.models.generate_content(\n    model=\"gemini-2.5-flash\",\n    contents=\"Explain what an API is to a high school student.\"\n)\n\nprint(\"Gemini says:\\n\")\nprint(response.text)\nif name == “main”: main()\nYou can run this code in your terminal with:\npython gemini_demo.py\nIf everything is set up correctly, Gemini will print a helpful explanation."
   },
   {
     "objectID": "posts/post-one/index.html#more-example-queries",
@@ -179,13 +179,13 @@
     "href": "posts/post-one/index.html#summary",
     "title": "Using Google Gemini from Python",
     "section": "8. Summary",
-    "text": "8. Summary\nIn this tutorial, we created or signed into a Google account, retrieved a GeminiAPI key from Google AI Studio, Installed the gogle-ganai package, set up your AIP key in the terminal, wrote some small python programs to query Gemini, and printed the AI’s response."
+    "text": "8. Summary\nIn this tutorial, we created or signed into a Google account, retrieved a GeminiAPI key from Google AI Studio, Installed the Google-Genai package, set up your AIP key in the terminal, wrote some small python programs to query Gemini, and printed the AI’s response."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Data Science Blog",
     "section": "",
-    "text": "What Is OpenCV? A Simple Overview for Beginners\n\n\n\nComputer Vision\n\nPython\n\n\n\nA friendly, high-level introduction to OpenCV—what it is, what it can do, and why it is one of the most important libraries in computer vision.\n\n\n\n\n\nDec 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMy SCUDEM Project: Modeling the AI Ouroboros Problem\n\n\n\nMath Modeling\n\nDifferential Equations\n\n\n\nA summary of my SCUDEM project, what SCUDEM is, and an overview of the AI Ouroboros modeling problem I worked on.\n\n\n\n\n\nDec 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Google Gemini from Python\n\n\n\nAI\n\nPython\n\n\n\nA simple, student-friendly walkthrough on setting up a Google account, getting a Gemini API key, and calling Gemini from Python.\n\n\n\n\n\nDec 1, 2025\n\n\n\n\n\nNo matching items"
+    "text": "What Is OpenCV? A Simple Overview for Beginners\n\n\n\nComputer Vision\n\nPython\n\n\n\nA friendly, high-level introduction to OpenCV—what it is, what it can do, and why it is one of the most important libraries in computer vision.\n\n\n\n\n\nDec 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nMy SCUDEM Project: Modeling the AI Ouroboros Problem\n\n\n\nMath Modeling\n\nDifferential Equations\n\n\n\nA summary of my SCUDEM project, what SCUDEM is, and an overview of the AI Ouroboros modeling problem I worked on.\n\n\n\n\n\nDec 8, 2025\n\n\n\n\n\n\n\n\n\n\n\n\nUsing Google Gemini from Python\n\n\n\nAI\n\nPython\n\n\n\nA simple walkthrough on setting up a Google account, getting a Gemini API key, and calling Gemini from Python.\n\n\n\n\n\nDec 1, 2025\n\n\n\n\n\nNo matching items"
   }
 ]
